@@ -1,5 +1,7 @@
 package service;
-
+/**
+ * @author K2460782
+ */
 import java.util.Scanner;
 
 public interface AppointmentService {

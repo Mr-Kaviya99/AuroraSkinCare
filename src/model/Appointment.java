@@ -1,5 +1,7 @@
 package model;
-
+/**
+ * @author K2460782
+ */
 public class Appointment {
     private static int id = 1;
     private int appointmentId;

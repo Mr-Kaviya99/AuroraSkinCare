@@ -1,5 +1,7 @@
 package model;
-
+/**
+ * @author K2460782
+ */
 public class Patient {
     private String patientNIC;
     private String patientName;

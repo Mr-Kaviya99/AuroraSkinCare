@@ -1,5 +1,7 @@
 package model;
-
+/**
+ * @author K2460782
+ */
 public class Treatment {
     private String treatmentName;
     private double price;

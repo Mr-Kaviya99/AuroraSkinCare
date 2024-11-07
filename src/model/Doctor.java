@@ -1,5 +1,7 @@
 package model;
-
+/**
+ * @author K2460782
+ */
 import java.util.*;
 
 public class Doctor {

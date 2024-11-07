@@ -1,6 +1,6 @@
 package service.impl;
 /**
- * @author : K***
+ * @author K2460782
  */
 
 import model.Appointment;
@@ -170,6 +170,10 @@ public class AppointmentServiceImpl implements AppointmentService {
 
     }
 
+    /**
+     * View Appointment by Day
+     * @param scanner to get inputs
+     */
     @Override
     public void viewAppointmentsByDate(Scanner scanner) {
 
@@ -218,6 +222,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         }
     }
 
+    /**
+     * Search Appointments
+     * @param scanner to get inputs
+     */
     @Override
     public void searchAppointment(Scanner scanner) {
         System.out.println("=======================================================");
@@ -266,6 +274,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         }
     }
 
+    /**
+     * Print appointment details
+     * @param appointment requires to get appointment details
+     */
     private void printAppointmentDetails(Appointment appointment) {
         System.out.println("\t\tAppointment ID\t: " + appointment.getAppointmentID());
         System.out.println("\t\tPatient NIC\t\t: " + appointment.getPatient().getPatientNIC());
@@ -276,6 +288,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         System.out.println("\t\tTreatment\t\t: " + appointment.getTreatment());
     }
 
+    /**
+     * Update Appointments option selection method
+     * @param scanner to get inputs
+     */
     @Override
     public void updateAppointment(Scanner scanner) {
 
@@ -327,6 +343,11 @@ public class AppointmentServiceImpl implements AppointmentService {
         System.out.println("\t\tAppointment updated successfully!");
     }
 
+    /**
+     * Update day and time of an appointment
+     * @param scanner to get inputs
+     * @param appointment required for get appointment details
+     */
     private void updateDayAndTime(Scanner scanner, Appointment appointment) {
         Doctor doctor = appointment.getDoctor();
 
@@ -362,6 +383,11 @@ public class AppointmentServiceImpl implements AppointmentService {
         appointment.setTimeSlot(newTimeSlot);
     }
 
+    /**
+     * Update treatment details of appointment
+     * @param scanner to get inputs
+     * @param appointment required for get appointment details
+     */
     private void updateTreatment(Scanner scanner, Appointment appointment) {
         viewTreatments();
         System.out.print("\t\tEnter new Treatment Number : ");
@@ -381,6 +407,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         appointment.setTotalFee(newTotalFee);
     }
 
+    /**
+     * Generate invoice method
+     * @param scanner to get inputs
+     */
     @Override
     public void generateInvoice(Scanner scanner) {
 
@@ -409,6 +439,10 @@ public class AppointmentServiceImpl implements AppointmentService {
 
     }
 
+    /**
+     * print and calculate total fee and print generated invoice
+     * @param appointment required to get appointment details
+     */
     private void printGeneratedInvoice(Appointment appointment) {
         String patientInfo = "\t\tPatient Name\t\t: " + appointment.getPatient().getPatientName() +
                 "\n\t\tPatient NIC\t\t\t: " + appointment.getPatient().getPatientNIC() +
